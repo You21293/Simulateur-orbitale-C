@@ -1,58 +1,57 @@
+<div align="center">
+
 # Simulateur orbital de satellites en C
 
-Un simulateur pédagogique de mécanique orbitale qui modélise le mouvement de satellites autour de la Terre à partir de la gravitation universelle.
+**Explorer la mécanique orbitale en simulant des satellites autour de la Terre.**
 
-Le projet explore notamment la simulation de plusieurs objets, l’utilisation de paramètres orbitaux et l’analyse des distances entre satellites. Il est écrit en C.
+</div>
 
-## Aperçu
+---
 
-### Simulation de satellites GPS
+## Aperçu du projet
 
-![Simulation de satellites GPS](Simulation%20SATRLINK%20GPS.png)
+Ce projet met en pratique la programmation en C et les bases de la mécanique spatiale. Il vise à modéliser le mouvement de satellites soumis à l’attraction gravitationnelle terrestre, puis à observer leurs trajectoires et leurs distances.
 
-### Comparaison avec l’ISS et Hubble
+## Captures d’écran
 
-![Données GPS et simulation de l’ISS et de Hubble](Donne%20GPS%20et%20Simulation%20ISS%20HUBBLE.png)
+| Simulation de satellites GPS | ISS et Hubble | Analyse des distances |
+|:--:|:--:|:--:|
+| <img src="Simulation%20SATRLINK%20GPS.png" alt="Simulation de satellites GPS" width="260"> | <img src="Donne%20GPS%20et%20Simulation%20ISS%20HUBBLE.png" alt="Données GPS et simulation de l’ISS et de Hubble" width="260"> | <img src="Analyse%20des%20distances.png" alt="Analyse des distances entre satellites" width="260"> |
 
-### Analyse des distances
+## Ce que le projet illustre
 
-![Analyse des distances entre satellites](Analyse%20des%20distances.png)
-
-## Objectifs
-
-- Mettre en pratique la loi de la gravitation universelle.
-- Simuler les trajectoires de satellites autour de la Terre.
-- Comparer les résultats du modèle avec des satellites réels.
-- Étudier l’évolution des distances entre objets.
-
-## Contenu du dépôt
-
-Les captures d’écran ci-dessus montrent des exemples de simulations et d’analyses produites par le projet. Le code source et ses fichiers d’entrée se trouvent dans le dépôt.
-
-## Utilisation
-
-Le dépôt ne documente pas encore la commande de compilation ni les paramètres d’entrée. Pour lancer le programme, consulte le code source et les éventuels fichiers de données associés. Une prochaine étape utile sera d’ajouter une commande de compilation reproductible ainsi qu’un exemple complet d’exécution.
+- La gravitation universelle appliquée au mouvement orbital.
+- La simulation de plusieurs satellites.
+- La comparaison de scénarios impliquant des satellites GPS, l’ISS et Hubble.
+- L’analyse de l’évolution des distances entre objets.
 
 ## Modèle physique
 
-Le simulateur s’appuie sur la gravitation universelle. Pour un satellite de masse (m) situé à une distance (r) du centre de la Terre, l’accélération gravitationnelle idéale est :
+Dans le modèle gravitationnel à deux corps, l’accélération d’un satellite situé en position **r** par rapport au centre de la Terre s’écrit :
 
-[
-\vec{a} = -\frac{\mu}{r^3}\vec{r}
-]
+$$
+\vec{a} = -\frac{\mu}{r^3}\,\vec{r}
+$$
 
-où (\mu = GM_{\mathrm{Terre}}) est le paramètre gravitationnel terrestre et (\vec{r}) le vecteur position du satellite par rapport au centre de la Terre.
+avec :
 
-Les résultats dépendent des hypothèses et de la méthode numérique employées par le programme. Les captures illustrent les sorties du projet ; elles ne constituent pas à elles seules une validation de précision orbitale.
+- $\vec{r}$ : vecteur position du satellite depuis le centre de la Terre ;
+- $r = \lVert \vec{r} \rVert$ : distance au centre de la Terre ;
+- $\mu = G M_{\mathrm{Terre}}$ : paramètre gravitationnel terrestre.
 
-## Pistes d’amélioration
+Le signe négatif indique que l’accélération est dirigée vers la Terre. La précision des résultats dépend des hypothèses physiques et de la méthode numérique utilisée.
 
-- Documenter les prérequis, la compilation et l’exécution pas à pas.
-- Ajouter un jeu de paramètres d’exemple et les résultats attendus.
-- Préciser le schéma d’intégration numérique et son pas de temps.
-- Ajouter des tests sur des cas orbitaux connus et vérifier la conservation de l’énergie.
-- Décrire les limites du modèle, par exemple l’absence éventuelle de perturbations orbitales.
+## Utilisation
 
-## Auteur
+La commande de compilation, les paramètres d’entrée et les étapes de lancement ne sont pas encore documentés dans le dépôt. Ils restent à ajouter pour rendre le programme facile à reproduire sur une autre machine.
 
-Projet personnel d’apprentissage en mécanique orbitale et en programmation C.
+## Améliorations à prévoir
+
+- Ajouter les prérequis et une commande de compilation vérifiée.
+- Fournir un exemple d’entrée et la sortie attendue.
+- Documenter la méthode d’intégration et le pas de temps.
+- Comparer les résultats à des cas orbitaux de référence.
+
+---
+
+*Projet personnel d’apprentissage en mécanique orbitale et en programmation C.*
