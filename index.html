@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#101923"><title>Simulateur orbital — Satellites en C</title>
+<style>
+:root{color-scheme:dark;--bg:#101923;--panel:#182532;--line:#2c3d4a;--muted:#9fb0bc;--text:#edf4f7;--cyan:#5de1e6;--orange:#ffbd75;--blue:#76a9ff}
+*{box-sizing:border-box}body{margin:0;min-height:100vh;background:radial-gradient(ellipse at 52% 0,#23394a 0,var(--bg) 56%);color:var(--text);font:15px/1.5 Inter,Segoe UI,system-ui,sans-serif}
+main{max-width:1100px;margin:auto;padding:42px 24px 56px}header{display:flex;align-items:flex-end;justify-content:space-between;gap:24px;margin-bottom:26px}
+.eyebrow{margin:0 0 8px;color:var(--cyan);font-size:12px;font-weight:750;letter-spacing:.16em;text-transform:uppercase}h1{margin:0;font-size:clamp(30px,5vw,48px);line-height:1.08;letter-spacing:-.04em}
+.sub{color:var(--muted);margin:12px 0 0;max-width:650px}.tag{border:1px solid #34515d;border-radius:99px;padding:8px 12px;color:#b7d8df;white-space:nowrap;font-size:12px}
+.card{background:linear-gradient(145deg,rgba(29,45,59,.96),rgba(21,33,44,.96));border:1px solid var(--line);border-radius:18px;box-shadow:0 18px 50px #0003}
+.hero{display:grid;grid-template-columns:1.1fr .9fr;gap:18px;margin-bottom:18px}.intro{padding:26px}.intro h2{margin:0 0 10px;font-size:19px}.intro p{color:var(--muted);margin:0 0 19px}
+.actions{display:flex;gap:10px;flex-wrap:wrap}.button{display:inline-flex;text-decoration:none;color:#0f222c;background:var(--cyan);padding:10px 14px;border-radius:10px;font-weight:750;font-size:13px}.button.secondary{color:var(--text);background:#243746;border:1px solid #3b5565}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:24px}.stat{border-top:1px solid var(--line);padding-top:10px;color:var(--muted);font-size:11px}.stat b{display:block;color:var(--text);font-size:15px;margin-bottom:3px}
+.art{min-height:300px;padding:16px;overflow:hidden}.art svg{width:100%;height:100%;min-height:265px}
+.section-title{display:flex;justify-content:space-between;gap:12px;align-items:end;margin:34px 2px 14px}.section-title h2{font-size:20px;margin:0}.section-title p{margin:0;color:var(--muted);font-size:12px}
+.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.shot{overflow:hidden}.shot h3{font-size:13px;margin:0;padding:15px 16px 12px}.shot img{display:block;width:100%;height:220px;object-fit:cover;background:#111d27;border-top:1px solid var(--line)}
+.note{margin-top:18px;padding:17px 19px;border-left:2px solid var(--orange);color:var(--muted);font-size:13px}
+footer{color:#82939e;font-size:12px;margin:18px 4px 0}
+@media(max-width:800px){main{padding:28px 14px 40px}.hero{grid-template-columns:1fr}.gallery{grid-template-columns:1fr 1fr}.art{min-height:240px}.shot img{height:200px}}
+@media(max-width:520px){header{display:block}.tag{display:inline-block;margin-top:16px}.gallery{grid-template-columns:1fr}.shot img{height:auto;max-height:290px}.stats{gap:7px}.stat b{font-size:13px}.section-title{display:block}.section-title p{margin-top:5px}}
+</style></head><body><main>
+<header><div><p class="eyebrow">Mécanique orbitale · Simulation C</p><h1>Satellites en orbite</h1><p class="sub">Observer des trajectoires et comparer des configurations de satellites artificiels autour de la Terre.</p></div><div class="tag">Projet pédagogique · Langage C</div></header>
+<section class="hero">
+<div class="card intro"><h2>Explorer le simulateur</h2><p>Cette page rassemble les vues de simulation déjà présentes dans le dépôt : satellites GPS, scénarios ISS et Hubble, et analyse des distances.</p>
+<div class="actions"><a class="button" href="#captures">Voir les captures</a><a class="button secondary" href="https://github.com/You21293/Simulateur-orbitale-C">Ouvrir le dépôt C ↗</a></div>
+<div class="stats"><div class="stat"><b>Satellites</b>Objets orbitaux</div><div class="stat"><b>Trajectoires</b>Comparaison visuelle</div><div class="stat"><b>Distances</b>Analyse de simulation</div></div></div>
+<div class="card art"><svg viewBox="0 0 480 310" role="img" aria-label="Illustration de plusieurs trajectoires orbitales autour de la Terre">
+<defs><radialGradient id="earth"><stop stop-color="#a6eff0"/><stop offset=".42" stop-color="#328fa7"/><stop offset="1" stop-color="#153650"/></radialGradient><filter id="glow"><feGaussianBlur stdDeviation="5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs>
+<circle cx="240" cy="155" r="112" fill="none" stroke="#263b49" stroke-dasharray="3 8"/><ellipse cx="240" cy="155" rx="170" ry="75" fill="none" stroke="#5de1e6" stroke-width="2"/><ellipse cx="240" cy="155" rx="190" ry="122" fill="none" stroke="#76a9ff" stroke-width="1.6" transform="rotate(-24 240 155)"/><ellipse cx="240" cy="155" rx="130" ry="92" fill="none" stroke="#ffbd75" stroke-width="1.6" transform="rotate(34 240 155)"/>
+<circle cx="240" cy="155" r="41" fill="url(#earth)" stroke="#8ee9eb" stroke-width="1.5"/><path d="M222 148q8-14 19-6l7 4-5 8 9 4-4 10-12 1-4-9-11-3z" fill="#79d0ba" opacity=".72"/><circle cx="76" cy="155" r="5" fill="#5de1e6" filter="url(#glow)"/><circle cx="361" cy="60" r="5" fill="#76a9ff" filter="url(#glow)"/><circle cx="278" cy="241" r="5" fill="#ffbd75" filter="url(#glow)"/>
+<text x="22" y="143" fill="#9fb0bc" font-size="12">GPS</text><text x="371" y="58" fill="#9fb0bc" font-size="12">ISS</text><text x="288" y="250" fill="#9fb0bc" font-size="12">Hubble</text><text x="185" y="220" fill="#9fb0bc" font-size="11">Terre</text>
+</svg></div></section>
+<div class="section-title" id="captures"><h2>Captures du projet</h2><p>Images déjà présentes dans le dépôt GitHub.</p></div>
+<section class="gallery">
+<article class="card shot"><h3>Simulation de satellites GPS</h3><img src="Simulation%20SATRLINK%20GPS.png" alt="Capture de la simulation de satellites GPS" loading="lazy"></article>
+<article class="card shot"><h3>Scénarios ISS et Hubble</h3><img src="Donne%20GPS%20et%20Simulation%20ISS%20HUBBLE.png" alt="Capture des données GPS et de la simulation ISS et Hubble" loading="lazy"></article>
+<article class="card shot"><h3>Analyse des distances</h3><img src="Analyse%20des%20distances.png" alt="Capture de l’analyse des distances entre satellites" loading="lazy"></article>
+</section>
+<div class="note">Le modèle physique, les paramètres et la méthode numérique détaillés restent ceux du programme C. Cette page sert de présentation visuelle et ne remplace pas l’exécution du simulateur.</div>
+<footer>Gravitation universelle · Satellites artificiels · Programmation C</footer>
+</main></body></html>
