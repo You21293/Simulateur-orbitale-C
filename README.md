@@ -2,56 +2,58 @@
 
 # Simulateur orbital de satellites en C
 
-**Explorer la mécanique orbitale en simulant des satellites autour de la Terre.**
+### Mécanique orbitale · Satellites · Analyse des trajectoires
+
+Un projet en C pour explorer le mouvement de satellites artificiels autour de la Terre.
+
+[**Voir la présentation visuelle ↗**](https://you21293.github.io/Simulateur-orbitale-C/)
+
+![Langage C](https://img.shields.io/badge/langage-C-5865F2)
+![Mécanique orbitale](https://img.shields.io/badge/sujet-orbites-2E8B57)
+![Simulation](https://img.shields.io/badge/projet-simulation-5de1e6)
 
 </div>
 
 ---
 
-## Aperçu du projet
+## Aperçu
 
-Ce projet met en pratique la programmation en C et les bases de la mécanique spatiale. Il vise à modéliser le mouvement de satellites soumis à l’attraction gravitationnelle terrestre, puis à observer leurs trajectoires et leurs distances.
+Le projet met en pratique les bases de la mécanique orbitale et la programmation en C. Les captures disponibles présentent des simulations de satellites GPS, des exemples impliquant l’ISS et Hubble, ainsi qu’une analyse de distances.
 
-## Captures d’écran
+[Découvrir les captures et la présentation](https://you21293.github.io/Simulateur-orbitale-C/)
 
-| Simulation de satellites GPS | ISS et Hubble | Analyse des distances |
-|:--:|:--:|:--:|
-| <img src="Simulation%20SATRLINK%20GPS.png" alt="Simulation de satellites GPS" width="260"> | <img src="Donne%20GPS%20et%20Simulation%20ISS%20HUBBLE.png" alt="Données GPS et simulation de l’ISS et de Hubble" width="260"> | <img src="Analyse%20des%20distances.png" alt="Analyse des distances entre satellites" width="260"> |
+## Ce que montrent les simulations
 
-## Ce que le projet illustre
-
-- La gravitation universelle appliquée au mouvement orbital.
-- La simulation de plusieurs satellites.
-- La comparaison de scénarios impliquant des satellites GPS, l’ISS et Hubble.
-- L’analyse de l’évolution des distances entre objets.
+- Plusieurs satellites artificiels autour de la Terre.
+- Des scénarios autour des satellites GPS, de l’ISS et de Hubble.
+- Une analyse de distances entre objets simulés.
 
 ## Modèle physique
 
-Dans le modèle gravitationnel à deux corps, l’accélération d’un satellite situé en position **r** par rapport au centre de la Terre s’écrit :
+L’attraction gravitationnelle fournit l’accélération centripète du modèle orbital. Pour un vecteur position $\vec r$ mesuré depuis le centre terrestre :
 
 $$
 \vec{a} = -\frac{\mu}{r^3}\,\vec{r}
 $$
 
-avec :
+où $r=\lVert\vec r\rVert$ et $\mu=GM_{\mathrm{Terre}}$.
 
-- $\vec{r}$ : vecteur position du satellite depuis le centre de la Terre ;
-- $r = \lVert \vec{r} \rVert$ : distance au centre de la Terre ;
-- $\mu = G M_{\mathrm{Terre}}$ : paramètre gravitationnel terrestre.
+Les détails de l’intégration numérique et les paramètres employés doivent être lus avec le code source. Les images sont des sorties de simulation et ne constituent pas, à elles seules, une validation de précision orbitale.
 
-Le signe négatif indique que l’accélération est dirigée vers la Terre. La précision des résultats dépend des hypothèses physiques et de la méthode numérique utilisée.
+## Captures d’écran
 
-## Utilisation
+| Satellites GPS | ISS et Hubble | Analyse des distances |
+|:--:|:--:|:--:|
+| ![Simulation de satellites GPS](Simulation%20SATRLINK%20GPS.png) | ![Simulation de l’ISS et de Hubble](Donne%20GPS%20et%20Simulation%20ISS%20HUBBLE.png) | ![Analyse des distances](Analyse%20des%20distances.png) |
 
-La commande de compilation, les paramètres d’entrée et les étapes de lancement ne sont pas encore documentés dans le dépôt. Ils restent à ajouter pour rendre le programme facile à reproduire sur une autre machine.
+## Fichiers
 
-## Améliorations à prévoir
-
-- Ajouter les prérequis et une commande de compilation vérifiée.
-- Fournir un exemple d’entrée et la sortie attendue.
-- Documenter la méthode d’intégration et le pas de temps.
-- Comparer les résultats à des cas orbitaux de référence.
+Les sources et les images du projet sont disponibles dans ce dépôt. La page de présentation réunit les captures existantes dans une mise en page adaptée au navigateur et au mobile.
 
 ---
 
-*Projet personnel d’apprentissage en mécanique orbitale et en programmation C.*
+<div align="center">
+
+Projet personnel d’apprentissage en mécanique orbitale et programmation C.
+
+</div>
