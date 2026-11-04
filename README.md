@@ -6,8 +6,6 @@
 
 Un projet en C pour explorer le mouvement de satellites artificiels autour de la Terre.
 
-[**Voir la présentation visuelle ↗**](https://you21293.github.io/Simulateur-orbitale-C/)
-
 ![Langage C](https://img.shields.io/badge/langage-C-5865F2)
 ![Mécanique orbitale](https://img.shields.io/badge/sujet-orbites-2E8B57)
 ![Simulation](https://img.shields.io/badge/projet-simulation-5de1e6)
@@ -20,8 +18,6 @@ Un projet en C pour explorer le mouvement de satellites artificiels autour de la
 
 Le projet met en pratique les bases de la mécanique orbitale et la programmation en C. Les captures disponibles présentent des simulations de satellites GPS, des exemples impliquant l’ISS et Hubble, ainsi qu’une analyse de distances.
 
-[Découvrir les captures et la présentation](https://you21293.github.io/Simulateur-orbitale-C/)
-
 ## Ce que montrent les simulations
 
 - Plusieurs satellites artificiels autour de la Terre.
@@ -30,7 +26,7 @@ Le projet met en pratique les bases de la mécanique orbitale et la programmatio
 
 ## Modèle physique
 
-L’attraction gravitationnelle fournit l’accélération centripète du modèle orbital. Pour un vecteur position $\vec r$ mesuré depuis le centre terrestre :
+Pour un vecteur position $\vec r$ mesuré depuis le centre terrestre, l’accélération gravitationnelle idéale s’écrit :
 
 $$
 \vec{a} = -\frac{\mu}{r^3}\,\vec{r}
@@ -38,7 +34,7 @@ $$
 
 où $r=\lVert\vec r\rVert$ et $\mu=GM_{\mathrm{Terre}}$.
 
-Les détails de l’intégration numérique et les paramètres employés doivent être lus avec le code source. Les images sont des sorties de simulation et ne constituent pas, à elles seules, une validation de précision orbitale.
+Les détails de l’intégration numérique et les paramètres employés sont à consulter dans le code source. Les images sont des sorties de simulation et ne constituent pas, à elles seules, une validation de précision orbitale.
 
 ## Captures d’écran
 
@@ -48,7 +44,7 @@ Les détails de l’intégration numérique et les paramètres employés doivent
 
 ## Fichiers
 
-Les sources et les images du projet sont disponibles dans ce dépôt. La page de présentation réunit les captures existantes dans une mise en page adaptée au navigateur et au mobile.
+Les sources et les images du projet sont disponibles dans ce dépôt.
 
 ---
 
